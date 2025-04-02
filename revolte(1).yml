@@ -7,7 +7,7 @@ revolte:
       branch: qatest
       services:
         rid_1:
-          name: webservice
+          name: chatboxservice
           type: WEB_SERVICE
           entryPoint: index.js
           domain: api.revolte.com
