@@ -3,7 +3,7 @@ revolte:
   project: Telegram
   appName: chatbox
   env:
-    preview:
+    qa:
       branch: qatest
       services:
         rid_1:
