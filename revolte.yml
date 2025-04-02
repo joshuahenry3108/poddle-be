@@ -3,8 +3,8 @@ revolte:
   project: Telegram
   appName: chatbox
   env:
-    qa:
-      branch: qatest
+    production:
+      branch: production
       services:
         rid_1:
           name: webservice
