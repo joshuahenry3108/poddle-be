@@ -1,0 +1,33 @@
+revolte:
+  version: '1.0'
+  project: Ultron 2.0
+  appName: Jarvis-be
+  env:
+    staging:
+      branch: main
+      services:
+        rid_1:
+          name: payment-service
+          type: WEB_SERVICE
+          entryPoint: index.js
+          specifications:
+            cpu: 2
+            memory: 2
+            storage: 30
+          properties:
+            health: /health
+            port: 8080
+            variables:
+              BASE_URL: /api/v1
+              DATABASE_URL: '#{payment-service-db.dbUrl}'
+              DATABASE_PORT: '#{payment-service-db.dbPort}'
+              DATABASE_USERNAME: '#{payment-service-db.dbUsername}'
+              DATABASE_PASSWORD: '#{payment-service-db.dbPassword}'
+        rid_2:
+          name: payment-service-db
+          type: DATABASE
+          specifications:
+            cpu: 2
+            memory: 2
+            storage: 30
+            engine: postgres
