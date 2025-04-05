@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Ultron 2.0
-  appName: Jarvis-be
+  project: Shield-academy
+  appName: helocarrier-be
   env:
     staging:
       branch: main
