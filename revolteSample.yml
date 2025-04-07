@@ -1,13 +1,13 @@
 revolte:
   version: '1.0'
-  project: Poddle
-  appName: Logout
+  project: Shield-academy
+  appName: helocarrier-be
   env:
-    preview:
-      branch: qa-test
+    staging:
+      branch: main
       services:
         rid_1:
-          name: logout-service
+          name: payment-service
           type: WEB_SERVICE
           entryPoint: index.js
           specifications:
@@ -19,12 +19,12 @@ revolte:
             port: 8080
             variables:
               BASE_URL: /api/v1
-              DATABASE_URL: '#{logout-db.dbUrl}'
-              DATABASE_PORT: '#{logout-db.dbPort}'
-              DATABASE_USERNAME: '#{logout-db.dbUsername}'
-              DATABASE_PASSWORD: '#{logout-db.dbPassword}'
+              DATABASE_URL: '#{payment-service-db.dbUrl}'
+              DATABASE_PORT: '#{payment-service-db.dbPort}'
+              DATABASE_USERNAME: '#{payment-service-db.dbUsername}'
+              DATABASE_PASSWORD: '#{payment-service-db.dbPassword}'
         rid_2:
-          name: logout-db
+          name: payment-service-db
           type: DATABASE
           specifications:
             cpu: 2
