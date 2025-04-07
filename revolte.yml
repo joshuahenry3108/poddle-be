@@ -3,11 +3,11 @@ revolte:
   project: Poddle
   appName: Logout
   env:
-    qa:
+    staging:
       branch: preview-test
       services:
         rid_1:
-          name: anotherservice
+          name: staging-service
           type: WEB_SERVICE
           entryPoint: index.js
           specifications:
@@ -19,12 +19,12 @@ revolte:
             port: 8080
             variables:
               BASE_URL: /api/v1
-              DATABASE_URL: '#{logout-db.dbUrl}'
-              DATABASE_PORT: '#{logout-db.dbPort}'
-              DATABASE_USERNAME: '#{logout-db.dbUsername}'
-              DATABASE_PASSWORD: '#{logout-db.dbPassword}'
+              DATABASE_URL: '#{test-db.dbUrl}'
+              DATABASE_PORT: '#{test-db.dbPort}'
+              DATABASE_USERNAME: '#{test-db.dbUsername}'
+              DATABASE_PASSWORD: '#{test-db.dbPassword}'
         rid_2:
-          name: logout-db
+          name: test-db
           type: DATABASE
           specifications:
             cpu: 2
