@@ -3,11 +3,11 @@ revolte:
   project: Poddle
   appName: Logout
   env:
-    preview:
-      branch: qa-test
+    qa:
+      branch: preview-test
       services:
         rid_1:
-          name: logoutservice
+          name: anotherservice
           type: WEB_SERVICE
           entryPoint: index.js
           specifications:
