@@ -7,7 +7,7 @@ revolte:
       branch: qa-test
       services:
         rid_1:
-          name: logout-service
+          name: logoutservice
           type: WEB_SERVICE
           entryPoint: index.js
           specifications:
