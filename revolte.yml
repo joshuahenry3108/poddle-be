@@ -4,7 +4,7 @@ revolte:
   appName: payment-management
   env:
     qa:
-      branch: preview-test
+      branch: staging
       services:
         rid_1:
           name: payments-service2
