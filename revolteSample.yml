@@ -1,33 +1,33 @@
 revolte:
   version: '1.0'
-  project: Shield-academy
-  appName: helocarrier-be
+  project: walmart
+  appName: payment-management
   env:
     staging:
-      branch: main
+      branch: staging
       services:
         rid_1:
-          name: payment-service
+          name: payments-service2
           type: WEB_SERVICE
           entryPoint: index.js
           specifications:
             cpu: 2
-            memory: 2
+            memory: 1
             storage: 30
           properties:
             health: /health
             port: 8080
             variables:
               BASE_URL: /api/v1
-              DATABASE_URL: '#{payment-service-db.dbUrl}'
-              DATABASE_PORT: '#{payment-service-db.dbPort}'
-              DATABASE_USERNAME: '#{payment-service-db.dbUsername}'
-              DATABASE_PASSWORD: '#{payment-service-db.dbPassword}'
+              DATABASE_URL: '#{test-db.dbUrl}'
+              DATABASE_PORT: '#{test-db.dbPort}'
+              DATABASE_USERNAME: '#{test-db.dbUsername}'
+              DATABASE_PASSWORD: '#{test-db.dbPassword}'
         rid_2:
-          name: payment-service-db
+          name: test-db
           type: DATABASE
           specifications:
             cpu: 2
-            memory: 2
+            memory: 1
             storage: 30
             engine: postgres
