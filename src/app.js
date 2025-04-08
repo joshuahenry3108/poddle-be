@@ -6,6 +6,7 @@ let app = express();
 
 const startServer = async () => {
   console.log(process.env);
+  
   await connectDB();
   // Define request response in root URL (/)
   app.get("/", function (req, res) {
