@@ -7,7 +7,7 @@ revolte:
       branch: preview-test
       services:
         rid_1:
-          name: payments-service
+          name: payments-service2
           type: WEB_SERVICE
           entryPoint: index.js
           specifications:
