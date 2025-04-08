@@ -3,7 +3,7 @@ revolte:
   project: walmart
   appName: payment-management
   env:
-    qa:
+    staging:
       branch: staging
       services:
         rid_1:
