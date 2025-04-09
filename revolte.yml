@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: walmart
-  appName: payment-management
+  project: demo-project
+  appName: sample-node-be
   env:
     staging:
       branch: staging
