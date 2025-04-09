@@ -21,8 +21,8 @@ revolte:
               BASE_URL: /api/v1
               DATABASE_URL: '#{test-db.dbUrl}'
               DATABASE_PORT: '#{test-db.dbPort}'
-              DATABASE_USERNAME: '#{test-db.dbUsername}'
-              DATABASE_PASSWORD: '#{test-db.dbPassword}'
+              # DATABASE_USERNAME: '#{test-db.dbUsername}'
+              # DATABASE_PASSWORD: '#{test-db.dbPassword}'
         rid_2:
           name: test-db
           type: DATABASE
