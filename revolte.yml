@@ -1,13 +1,13 @@
 revolte:
   version: '1.0'
-  project: Shield-academy
-  appName: helocarrier-be
+  project: Cloud
+  appName: aws-app
   env:
     staging:
-      branch: main
+      branch: quality-test
       services:
         rid_1:
-          name: payment-service
+          name: aws-service
           type: WEB_SERVICE
           entryPoint: index.js
           specifications:
