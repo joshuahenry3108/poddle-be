@@ -1,13 +1,13 @@
 revolte:
   version: '1.0'
-  project: Cloud
-  appName: aws-app
+  project: Revolte
+  appName: backend-test-be
   env:
     staging:
       branch: quality-test
       services:
         rid_1:
-          name: aws-service
+          name: test-service
           type: WEB_SERVICE
           entryPoint: index.js
           specifications:
