@@ -3,7 +3,7 @@ revolte:
   project: Revolte
   appName: backend-test-be
   env:
-    staging:
+    preview:
       branch: quality-test
       services:
         rid_1:
