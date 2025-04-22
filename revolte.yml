@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Revolte
-  appName: backend-test-be
+  project: Infosys Ltd
+  appName: backend-app-deploy
   env:
     preview:
       branch: quality-test
