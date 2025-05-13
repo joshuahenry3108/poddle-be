@@ -1,13 +1,13 @@
 revolte:
   version: '1.0'
-  project: one-advanced
-  appName: test-be-app
+  project: MyProject
+  appName: my-be-project
   env:
     qa:
       branch: qatest
       services:
         rid_1:
-          name: test-web-service
+          name: web-service
           type: WEB_SERVICE
           entryPoint: index.js
           specifications:
