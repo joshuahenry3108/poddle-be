@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: MyProject
-  appName: my-be-project
+  project: Sample-Project
+  appName: sample-backend-app
   env:
     qa:
       branch: qatest
