@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: ZenPro
-  appName: zen-be-app
+  project: BookMyShow
+  appName: be-app
   env:
     production:
       branch: main
@@ -38,7 +38,7 @@ revolte:
             storage: 50
             engine: postgres
     staging:
-      branch: qatest
+      branch: staging
       services:
         rid_1:
           name: web-service
