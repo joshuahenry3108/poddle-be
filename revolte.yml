@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: BookMyShow
-  appName: be-app
+  project: Pampa
+  appName: pampa-bebe
   env:
     production:
       branch: main
