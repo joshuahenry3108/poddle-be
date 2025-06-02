@@ -38,7 +38,7 @@ revolte:
             storage: 50
             engine: postgres
     staging:
-      branch: qa-test
+      branch: quality-test
       services:
         rid_1:
           name: web-service
