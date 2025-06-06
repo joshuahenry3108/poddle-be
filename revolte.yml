@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: My First Project
-  appName: second-app
+  project: Project10
+  appName: app10new
   env:
     production:
       branch: main
