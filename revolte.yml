@@ -68,7 +68,7 @@ revolte:
             storage: 50
             engine: postgres
     qa:
-      branch: qa
+      branch: qatest
       services:
         rid_1:
           name: web-service
@@ -79,7 +79,7 @@ revolte:
             memory: 2
             storage: 30
           properties:
-            health: /health
+            health: /src/health
             port: 8080
             variables:
               BASE_URL: /api/v1
