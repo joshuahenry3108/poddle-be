@@ -73,13 +73,13 @@ revolte:
         rid_1:
           name: web-service
           type: WEB_SERVICE
-          entryPoint: index.js
+          entryPoint: test.js
           specifications:
             cpu: 2
             memory: 2
             storage: 30
           properties:
-            health: /src/health
+            health: /health
             port: 8080
             variables:
               BASE_URL: /api/v1
