@@ -1,19 +1,18 @@
 revolte:
   version: '1.0'
-  project: AccuSure
-  appName: new-app
+  project: salesforce30
+  appName: backend
   env:
-    staging:
-      branch: qatest
+    preview:
       services:
         rid_1:
           name: web-service
           type: WEB_SERVICE
           entryPoint: index.js
           specifications:
-            cpu: 2
-            memory: 2
-            storage: 30
+            cpu: 4
+            memory: 16
+            storage: 50
           properties:
             health: /health
             port: 8080
