@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Poddle
-  appName: Logout
+  project: salesforce30
+  appName: be-diffapp
   env:
     preview:
       branch: qa-test
