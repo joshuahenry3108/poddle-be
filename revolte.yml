@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
   project: salesforce30
-  appName: backend
+  appName: be-diffapp
   env:
     production:
       branch: main
