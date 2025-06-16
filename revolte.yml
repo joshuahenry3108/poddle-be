@@ -10,7 +10,7 @@ revolte:
           name: web-service
           type: WEB_SERVICE
           entryPoint: index.js
-          domain: api.revolte.com
+          domain: row-moccasin-antlion.qa.poddleops.com
           specifications:
             cpu: 2
             memory: 2
