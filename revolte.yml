@@ -1,19 +1,24 @@
 revolte:
   version: '1.0'
-  project: sample2021
-  appName: new-test-app0101
+  project: sampleupdate
+  appName: poddle-be-new
   env:
-    qa:
-      branch: qa
+    production:
+      branch: qatest
       services:
         rid_1:
           name: web-service
           type: WEB_SERVICE
           entryPoint: index.js
+          domain: api.revolte.com
           specifications:
             cpu: 2
             memory: 2
             storage: 30
+            autoScaling:
+              replica:
+                min: 1
+                max: 3
           properties:
             health: /health
             port: 8080
@@ -24,38 +29,8 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
-              DATABASE_CONNECTION_STRING: '#{db.dbConnectionString}'
         rid_2:
           name: db
-          type: DATABASE
-          specifications:
-            cpu: 2
-            memory: 4
-            storage: 50
-            engine: postgres
-    preview:
-      services:
-        rid_1:
-          name: new-test-app0101-web-service
-          type: WEB_SERVICE
-          entryPoint: index.js
-          specifications:
-            cpu: 2
-            memory: 2
-            storage: 30
-          properties:
-            health: /health
-            port: 8080
-            variables:
-              BASE_URL: /api/v1
-              DATABASE_URL: '#{ab.dbUrl}'
-              DATABASE_PORT: '#{ab.dbPort}'
-              DATABASE_USERNAME: '#{ab.dbUsername}'
-              DATABASE_PASSWORD: '#{ab.dbPassword}'
-              DATABASE_NAME: '#{ab.dbName}'
-              DATABASE_CONNECTION_STRING: '#{ab.dbConnectionString}'
-        rid_2:
-          name: ab
           type: DATABASE
           specifications:
             cpu: 2
