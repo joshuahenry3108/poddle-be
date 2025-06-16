@@ -1,6 +1,6 @@
 revolte:
   version: '1.0'
-  project: sampleupdate
+  project: sample
   appName: poddle-be-new
   env:
     production:
