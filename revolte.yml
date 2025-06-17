@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: sample
-  appName: poddle-be-new
+  project: new-public-appgie-what
+  appName: backend-deployment
   env:
     production:
       branch: qatest
@@ -18,7 +18,7 @@ revolte:
             autoScaling:
               replica:
                 min: 1
-                max: 3
+                max: 2
           properties:
             health: /health
             port: 8080
