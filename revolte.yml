@@ -1,6 +1,6 @@
 revolte:
   version: '1.0'
-  project: salesforce30
+  project: Project1
   appName: be-diffapp
   env:
     production:
