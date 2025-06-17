@@ -12,8 +12,8 @@ revolte:
           entryPoint: index.js
           domain: prod-test-qa.poddleops.com
           specifications:
-            cpu: 2
-            memory: 2
+            cpu: 1
+            memory: 1
             storage: 30
             autoScaling:
               replica:
