@@ -18,7 +18,7 @@ revolte:
             autoScaling:
               replica:
                 min: 1
-                max: 4
+                max: 3
           properties:
             health: /health
             port: 8080
