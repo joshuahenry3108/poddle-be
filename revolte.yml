@@ -10,7 +10,7 @@ revolte:
           name: web-service
           type: WEB_SERVICE
           entryPoint: index.js
-          domain: prod-test-qa.poddleops.com
+          domain: prod-poen.qa.poddleops.com
           specifications:
             cpu: 1
             memory: 1
