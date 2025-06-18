@@ -1,24 +1,18 @@
 revolte:
-  version: '1.0'
-  project: new-public-appgie-what
-  appName: backend-app-deploy
+  version: '2'
+  project: Project 1806
+  appName: app-1806
   env:
-    production:
-      branch: qatest
+    preview:
       services:
         rid_1:
           name: web-service
           type: WEB_SERVICE
           entryPoint: index.js
-          domain: row-moccasin-antlion.qa.poddleops.com
           specifications:
-            cpu: 2
-            memory: 2
+            cpu: 1
+            memory: 1
             storage: 30
-            autoScaling:
-              replica:
-                min: 1
-                max: 3
           properties:
             health: /health
             port: 8080
@@ -29,6 +23,7 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
+              DATABASE_CONNECTION_STRING: '#{db.dbConnectionString}'
         rid_2:
           name: db
           type: DATABASE
