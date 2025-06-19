@@ -1,8 +1,38 @@
 revolte:
-  version: '2'
-  project: Project 1806
-  appName: app-1806
+  version: '1.0'
+  project: Project B
+  appName: app B
   env:
+    qa:
+      branch: qa
+      services:
+        rid_1:
+          name: web-service
+          type: WEB_SERVICE
+          entryPoint: index.js
+          specifications:
+            cpu: 4
+            memory: 16
+            storage: 50
+          properties:
+            health: /health
+            port: 8080
+            variables:
+              BASE_URL: /api/v1
+              DATABASE_URL: '#{db.dbUrl}'
+              DATABASE_PORT: '#{db.dbPort}'
+              DATABASE_USERNAME: '#{db.dbUsername}'
+              DATABASE_PASSWORD: '#{db.dbPassword}'
+              DATABASE_NAME: '#{db.dbName}'
+              DATABASE_CONNECTION_STRING: '#{db.dbConnectionString}'
+        rid_2:
+          name: db
+          type: DATABASE
+          specifications:
+            cpu: 2
+            memory: 4
+            storage: 50
+            engine: postgres
     preview:
       services:
         rid_1:
@@ -10,8 +40,8 @@ revolte:
           type: WEB_SERVICE
           entryPoint: index.js
           specifications:
-            cpu: 1
-            memory: 1
+            cpu: 2
+            memory: 2
             storage: 30
           properties:
             health: /health
