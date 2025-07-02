@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Untitled Project
-  appName: backend-app
+  project: Growth Project
+  appName: app-be
   env:
     production:
       branch: main
@@ -10,7 +10,6 @@ revolte:
           name: web-service
           type: WEB_SERVICE
           entryPoint: index.js
-          domain: api.revolte.com
           specifications:
             cpu: 2
             memory: 2
@@ -33,9 +32,6 @@ revolte:
           name: db
           type: DATABASE
           specifications:
-            cpu: 2
-            memory: 4
-            storage: 50
             engine: postgres
     staging:
       branch: staging
@@ -63,9 +59,6 @@ revolte:
           name: db
           type: DATABASE
           specifications:
-            cpu: 2
-            memory: 4
-            storage: 50
             engine: postgres
     qa:
       branch: qa
@@ -93,9 +86,6 @@ revolte:
           name: db
           type: DATABASE
           specifications:
-            cpu: 2
-            memory: 4
-            storage: 50
             engine: postgres
     preview:
       services:
@@ -122,7 +112,4 @@ revolte:
           name: db
           type: DATABASE
           specifications:
-            cpu: 2
-            memory: 4
-            storage: 50
             engine: postgres
