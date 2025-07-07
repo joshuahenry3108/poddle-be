@@ -13,9 +13,10 @@ const startServer = async () => {
 
   // Define request response in root URL (/)
   app.get("/health", function (req, res) {
-    res.json({
-      success: true,
-    });
+    res.status(500).json({ status: 'DOWN', reason: 'Simulated failure' });
+  //  res.json({
+  //    success: true,
+  //  });
   });
 
   // Launch listening server on port 8081
