@@ -1,9 +1,10 @@
 revolte:
   version: '1.0'
-  project: Great Project
-  appName: great-app
+  project: Akrivia
+  appName: akappbe
   env:
-    preview:
+    qa:
+      branch: qa
       services:
         rid_1:
           name: web-service
@@ -30,5 +31,5 @@ revolte:
           specifications:
             engine: postgres
             cpu: 2
-            memory: 2
+            memory: 4
             storage: 30
