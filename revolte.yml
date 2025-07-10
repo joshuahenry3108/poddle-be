@@ -31,5 +31,5 @@ revolte:
           specifications:
             engine: postgres
             cpu: 2
-            memory: 4
-            storage: 30
+            memory: 8
+            storage: 40
