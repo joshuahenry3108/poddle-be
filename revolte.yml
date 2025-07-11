@@ -13,7 +13,7 @@ revolte:
           specifications:
             cpu: 2
             memory: 8
-            storage: 70
+            storage: 50
           properties:
             health: /health
             port: 8080
