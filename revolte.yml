@@ -1,18 +1,17 @@
 revolte:
   version: '1.0'
   project: OnePlus
-  appName: one-app-be-db
+  appName: be-test-pp-new
   env:
-    staging:
-      branch: staging
+    preview:
       services:
         rid_1:
           name: web-service
           type: WEB_SERVICE
           entryPoint: index.js
           specifications:
-            cpu: 2
-            memory: 2
+            cpu: 4
+            memory: 16
             storage: 30
           properties:
             health: /health
@@ -30,6 +29,6 @@ revolte:
           type: DATABASE
           specifications:
             engine: postgres
-            cpu: 48
-            memory: 192
-            storage: 65536
+            cpu: 2
+            memory: 2
+            storage: 30
