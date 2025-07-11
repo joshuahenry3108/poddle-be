@@ -11,9 +11,9 @@ revolte:
           type: WEB_SERVICE
           entryPoint: index.js
           specifications:
-            cpu: 4
-            memory: 16
-            storage: 50
+            cpu: 2
+            memory: 8
+            storage: 70
           properties:
             health: /health
             port: 8080
