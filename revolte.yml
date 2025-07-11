@@ -1,10 +1,10 @@
 revolte:
   version: '1.0'
-  project: Akrivia
-  appName: akappbe
+  project: OnePlus
+  appName: one-app-be-db
   env:
-    qa:
-      branch: qa
+    staging:
+      branch: staging
       services:
         rid_1:
           name: web-service
@@ -30,6 +30,6 @@ revolte:
           type: DATABASE
           specifications:
             engine: postgres
-            cpu: 2
-            memory: 8
-            storage: 40
+            cpu: 48
+            memory: 192
+            storage: 65536
