@@ -10,8 +10,8 @@ revolte:
           type: WEB_SERVICE
           entryPoint: index.js
           specifications:
-            cpu: 4
-            memory: 16
+            cpu: 2
+            memory: 8
             storage: 30
           properties:
             health: /health
