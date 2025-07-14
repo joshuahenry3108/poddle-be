@@ -3,7 +3,7 @@ revolte:
   project: ORM Project
   appName: neww
   env:
-    qa:
+    staging:
       branch: qatest
       services:
         rid_1:
