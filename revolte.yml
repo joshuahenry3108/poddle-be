@@ -1,10 +1,9 @@
 revolte:
   version: '1.0'
-  project: OnePlus
-  appName: be-test-pp-new
+  project: ORM Project
+  appName: neww
   env:
-    qa:
-      branch: qatest
+    preview:
       services:
         rid_1:
           name: web-service
@@ -12,8 +11,8 @@ revolte:
           entryPoint: index.js
           specifications:
             cpu: 2
-            memory: 8
-            storage: 50
+            memory: 2
+            storage: 30
           properties:
             health: /health
             port: 8080
@@ -32,4 +31,4 @@ revolte:
             engine: postgres
             cpu: 2
             memory: 2
-            storage: 30
+            storage: 50
