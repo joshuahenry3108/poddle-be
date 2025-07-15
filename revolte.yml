@@ -29,6 +29,6 @@ revolte:
           type: DATABASE
           specifications:
             engine: postgres
-            cpu: 8
-            memory: 32
+            cpu: 4
+            memory: 16
             storage: 20
