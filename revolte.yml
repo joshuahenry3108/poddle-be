@@ -3,16 +3,17 @@ revolte:
   project: CloudBees
   appName: cloud-be-app
   env:
-    preview:
+    qa:
+      branch: qa
       services:
         rid_1:
           name: web-service
           type: WEB_SERVICE
           entryPoint: index.js
           specifications:
-            cpu: 2
-            memory: 2
-            storage: 30
+            cpu: 4
+            memory: 16
+            storage: 50
           properties:
             health: /health
             port: 8080
@@ -28,7 +29,7 @@ revolte:
           name: db
           type: DATABASE
           specifications:
-            engine: postgres
-            cpu: 2
-            memory: 1
-            storage: 20
+            engine: mysql
+            cpu: 4
+            memory: 16
+            storage: 22
