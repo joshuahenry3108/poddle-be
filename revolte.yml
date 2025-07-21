@@ -1,19 +1,18 @@
 revolte:
   version: '1.0'
-  project: CloudBees
-  appName: cloud-be-app
+  project: Kestra
+  appName: kes-app-be
   env:
-    qa:
-      branch: qa
+    preview:
       services:
         rid_1:
           name: web-service
           type: WEB_SERVICE
           entryPoint: index.js
           specifications:
-            cpu: 4
-            memory: 16
-            storage: 50
+            cpu: 1
+            memory: 1
+            storage: 30
           properties:
             health: /health
             port: 8080
@@ -29,7 +28,7 @@ revolte:
           name: db
           type: DATABASE
           specifications:
-            engine: mysql
-            cpu: 4
-            memory: 16
-            storage: 22
+            engine: postgres
+            cpu: 2
+            memory: 2
+            storage: 20
