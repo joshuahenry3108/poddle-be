@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: WrightCode
-  appName: code-be
+  project: Lenova
+  appName: backend-be
   env:
     preview:
       services:
@@ -24,21 +24,6 @@ revolte:
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
               DATABASE_CONNECTION_STRING: '#{db.dbConnectionString}'
-          insights:
-            swap:
-              - swap_used
-              - swap_free
-            cpu:
-              - cpu_time_idle
-              - cpu_time_user
-              - cpu_time_system
-            mem:
-              - mem_free
-              - mem_total
-            disk:
-              - disk_free
-              - disk_total
-              - disk_used
         rid_2:
           name: db
           type: DATABASE
