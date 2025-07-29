@@ -3,7 +3,8 @@ revolte:
   project: Lenova
   appName: backend-be
   env:
-    preview:
+    qa:
+      branch: qa
       services:
         rid_1:
           name: web-service
