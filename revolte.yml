@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Lenova
-  appName: backend-be
+  project: CGI Pro
+  appName: cgi-two
   env:
     qa:
       branch: qa
