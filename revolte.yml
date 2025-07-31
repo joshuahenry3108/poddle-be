@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: growth proj
-  appName: note-app
+  project: Automation
+  appName: test-new-app
   env:
     production:
       branch: main
