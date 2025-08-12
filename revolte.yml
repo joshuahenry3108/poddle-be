@@ -12,7 +12,7 @@ revolte:
           entryPoint: index.js
           specifications:
             cpu: 1
-            memory: 2
+            memory: 1
             storage: 30
             autoScaling:
               replica:
