@@ -1,17 +1,17 @@
 revolte:
   version: '1.0'
-  project: Automation
-  appName: test-new-app
+  project: Goldwin
+  appName: dotnet
   env:
     production:
-      branch: main
+      branch: qatest
       services:
         rid_1:
           name: web-service
           type: WEB_SERVICE
           entryPoint: index.js
           specifications:
-            cpu: 2
+            cpu: 1
             memory: 2
             storage: 30
             autoScaling:
@@ -107,7 +107,7 @@ revolte:
             memory: 2
             storage: 30
           properties:
-            health: /test
+            health: /health
             port: 8080
             variables:
               BASE_URL: /api/v1
