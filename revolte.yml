@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
   project: chrome
-  appName: backend-app
+  appName: poddle-be
   env:
     production:
       branch: main
