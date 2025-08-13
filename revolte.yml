@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: google
-  appName: second-app
+  project: chrome
+  appName: backend-app
   env:
     production:
       branch: main
@@ -11,7 +11,7 @@ revolte:
           type: WEB_SERVICE
           entryPoint: index.js
           specifications:
-            cpu: 1
+            cpu: 2
             memory: 2
             storage: 30
             autoScaling:
@@ -44,7 +44,7 @@ revolte:
           type: WEB_SERVICE
           entryPoint: index.js
           specifications:
-            cpu: 1
+            cpu: 2
             memory: 2
             storage: 30
           properties:
