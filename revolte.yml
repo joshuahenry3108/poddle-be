@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: nissan
-  appName: nissan-be
+  project: Auto
+  appName: webservice-db
   env:
     production:
       branch: main
@@ -28,20 +28,6 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
-          insights:
-            cpu:
-              - cpu_time_idle
-              - cpu_time_system
-              - cpu_time_user
-            swap:
-              - swap_used
-            disk:
-              - disk_free
-              - disk_total
-              - disk_used
-            mem:
-              - mem_total
-              - mem_free
         rid_2:
           name: db
           type: DATABASE
