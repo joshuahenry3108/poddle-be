@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Auto
-  appName: webservice-db
+  project: New app
+  appName: app-get
   env:
     production:
       branch: main
