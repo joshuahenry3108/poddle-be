@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: New app
-  appName: app-get
+  project: Init app
+  appName: init-app
   env:
     production:
       branch: main
