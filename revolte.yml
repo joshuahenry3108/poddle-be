@@ -41,7 +41,7 @@ revolte:
             storage: 30
             engine: postgres
     qa:
-      branch: qatest
+      branch: qa-test
       codeReview: true
       services:
         rid_1:
