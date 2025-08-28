@@ -2,13 +2,6 @@ revolte:
   version: '1.0'
   project: Untitled Project
   appName: testnew
-  config:
-    codeReview:
-      summarize: true
-      suggestFixes: true
-      commentStyle: Balanced
-      excludes:
-        - '["*/.json"]'
   env:
     staging:
       branch: qa-test
@@ -104,7 +97,6 @@ revolte:
             storage: 30
             engine: postgres
     preview:
-      codeReview: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -129,6 +121,6 @@ revolte:
           name: db
           specifications:
             cpu: 2
-            memory: 8
+            memory: 1
             storage: 30
             engine: postgres
