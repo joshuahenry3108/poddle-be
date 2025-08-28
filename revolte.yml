@@ -41,7 +41,7 @@ revolte:
             storage: 30
             engine: postgres
     qa:
-      branch: qa-test
+      branch: qatest
       codeReview: true
       services:
         rid_1:
@@ -60,16 +60,16 @@ revolte:
               DATABASE_NAME: '#{db.dbName}'
           specifications:
             cpu: 2
-            memory: 2
+            memory: 4
             storage: 30
         rid_2:
           type: DATABASE
           name: db
           specifications:
             cpu: 2
-            memory: 1
+            memory: 4
             storage: 30
-            engine: postgres
+            engine: mysql
     production:
       branch: production
       codeReview: false
