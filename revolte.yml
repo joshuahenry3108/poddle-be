@@ -8,10 +8,11 @@ revolte:
       suggestFixes: true
       commentStyle: Balanced
       excludes:
-        - '*/.json'
+        - '["*/.json"]'
   env:
     staging:
       branch: qa-test
+      codeReview: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -71,6 +72,7 @@ revolte:
             engine: postgres
     production:
       branch: production
+      codeReview: false
       services:
         rid_1:
           type: WEB_SERVICE
