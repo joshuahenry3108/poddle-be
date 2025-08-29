@@ -2,10 +2,14 @@ revolte:
   version: '1.0'
   project: Review App
   appName: review app be
+  config:
+    codeReview:
+      summarize: true
+      suggestFixes: false
+      commentStyle: Verbose
   env:
     staging:
       branch: qa-test
-      codeReview: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -35,7 +39,6 @@ revolte:
             engine: postgres
     qa:
       branch: qatest
-      codeReview: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -65,7 +68,6 @@ revolte:
             engine: postgres
     production:
       branch: production
-      codeReview: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -98,7 +100,7 @@ revolte:
             storage: 30
             engine: postgres
     preview:
-      codeReview: false
+      codeReview: true
       services:
         rid_1:
           type: WEB_SERVICE
