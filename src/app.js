@@ -3,13 +3,14 @@ import connectDB from "./database/index.js";
 
 let app = express();
 
+
 const startServer = async () => {
   console.log(process.env);
   await connectDB();
   // Define request response in root URL (/)
   // Added comment to commit
   app.get("/", function (req, res) {
-    res.send("Dockerize the node app");
+    res.send("Dockerize the node app changed");
   });
 
   // Define request response in root URL (/)
