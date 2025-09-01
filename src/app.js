@@ -13,7 +13,7 @@ const startServer = async () => {
   });
 
   // Define request response in root URL (/)
-  // changing commentlint
+  // removing comment
   app.get("/health", function (req, res) {
     res.json({
       success: true,
