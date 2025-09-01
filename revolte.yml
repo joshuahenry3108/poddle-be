@@ -1,22 +1,23 @@
 revolte:
   version: '1.0'
-  project: Review App
-  appName: review app be
+  project: Code Review
+  appName: PODDLE-APP-NEW
   config:
     codeReview:
       summarize: true
-      suggestFixes: false
-      commentStyle: Verbose
+      suggestFixes: true
+      commentStyle: Concise
   env:
     staging:
-      branch: qa-test
+      branch: quality-test
+      codeReview: true
       services:
         rid_1:
           type: WEB_SERVICE
           name: web_service
           entryPoint: index.js
           properties:
-            health: /health
+            health: /api/health
             port: 8080
             variables:
               BASE_URL: /api/v1
@@ -39,6 +40,7 @@ revolte:
             engine: postgres
     qa:
       branch: qatest
+      codeReview: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -68,13 +70,14 @@ revolte:
             engine: postgres
     production:
       branch: production
+      codeReview: true
       services:
         rid_1:
           type: WEB_SERVICE
           name: web_service
           entryPoint: index.js
           properties:
-            health: /health
+            health: /api/health
             port: 8080
             variables:
               BASE_URL: /api/v1
@@ -90,7 +93,7 @@ revolte:
             autoScaling:
               replica:
                 min: 1
-                max: 2
+                max: 1
         rid_2:
           type: DATABASE
           name: db
@@ -107,7 +110,7 @@ revolte:
           name: web_service
           entryPoint: index.js
           properties:
-            health: /health
+            health: /api/health
             port: 8080
             variables:
               BASE_URL: /api/v1
