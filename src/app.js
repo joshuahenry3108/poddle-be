@@ -9,6 +9,7 @@ const startServer = async () => {
   await connectDB();
   // Define request response in root URL (/) 
   //Removed commentline and added that again
+  //just a change
   app.get("/", function (req, res) {
     res.send("Dockerize the node app changed");
   });
