@@ -8,11 +8,13 @@ const startServer = async () => {
   console.log(process.env);
   await connectDB();
   // Define request response in root URL (/) 
+  //just a change
   app.get("/", function (req, res) {
     res.send("Dockerize the node app changed");
   });
 
   // Define request response in root URL (/)
+  // added another line
   app.get("/health", function (req, res) {
     res.json({
       success: true,
