@@ -4,9 +4,9 @@ revolte:
   appName: bebe
   config:
     codeReview:
-      summarize: true
+      summarize: false
       suggestFixes: false
-      commentStyle: Concise
+      commentStyle: Balanced
   env:
     staging:
       branch: staging
