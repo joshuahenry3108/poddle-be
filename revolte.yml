@@ -7,9 +7,10 @@ revolte:
       summarize: true
       suggestFixes: true
       commentStyle: Verbose
+
   env:
     staging:
-      branch: qa-test
+      branch: staging
       codeReview: true
       services:
         rid_1:
@@ -39,7 +40,7 @@ revolte:
             storage: 30
             engine: postgres
     qa:
-      branch: qatest
+      branch: review-test
       codeReview: true
       services:
         rid_1:
