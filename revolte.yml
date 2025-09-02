@@ -1,14 +1,13 @@
 revolte:
   version: '1.0'
   project: Google Pixel
-  appName: pix-app
+  appName: bebe
   config:
     codeReview:
       summarize: true
       suggestFixes: true
-      commentStyle: Concise
-      excludes:
-        - '*/.json'
+      commentStyle: Verbose
+
   env:
     staging:
       branch: staging
