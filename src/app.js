@@ -15,6 +15,7 @@ const startServer = async () => {
   });
 
   // Define request response in root URL (/)
+  // added another line
   app.get("/health", function (req, res) {
     res.json({
       success: true,
