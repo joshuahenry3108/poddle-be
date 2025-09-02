@@ -5,9 +5,8 @@ revolte:
   config:
     codeReview:
       summarize: true
-      suggestFixes: true
-      commentStyle: Verbose
-
+      suggestFixes: false
+      commentStyle: Concise
   env:
     staging:
       branch: staging
