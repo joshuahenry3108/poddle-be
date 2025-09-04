@@ -9,7 +9,7 @@ revolte:
       commentStyle: Balanced
   env:
     staging:
-      branch: staging
+      branch: qatest
       codeReview: true
       services:
         rid_1:
