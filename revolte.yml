@@ -1,10 +1,10 @@
 revolte:
   version: '1.0'
-  project: Google Pixel
-  appName: bebe
+  project: QA test
+  appName: qaqa
   config:
     codeReview:
-      summarize: false
+      summarize: true
       suggestFixes: false
       commentStyle: Balanced
   env:
@@ -39,7 +39,7 @@ revolte:
             storage: 30
             engine: postgres
     qa:
-      branch: review-test
+      branch: qatest
       codeReview: true
       services:
         rid_1:
