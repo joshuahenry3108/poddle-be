@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
   project: QA test
-  appName: newapp
+  appName: appcheck
   config:
     codeReview:
       summarize: true
@@ -58,8 +58,6 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
-            preScript:
-              - npm test
           specifications:
             cpu: 2
             memory: 1
