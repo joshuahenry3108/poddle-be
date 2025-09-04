@@ -123,6 +123,11 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
+            preScript:
+              - echo "Pre-deployment check starting..."
+              - uname -a
+              - node -v
+              - npm -v
           specifications:
             cpu: 2
             memory: 1
