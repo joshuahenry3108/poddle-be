@@ -24,17 +24,17 @@ revolte:
               - >-
                 apk update && apk add --no-cache \    chromium \    nss \   
                 freetype \    freetype-dev \    harfbuzz \    ca-certificates
-                \    ttf-freefont \    && rm -rf /var/cache/apk/*
+                \    ttf-freefont \    && rm -rf /var/cache/apk/* 
           specifications:
             cpu: 2
-            memory: 1
+            memory: 2
             storage: 30
         rid_2:
           type: DATABASE
           name: db
           specifications:
             cpu: 2
-            memory: 1
+            memory: 2
             storage: 30
             engine: postgres
     qa:
