@@ -20,6 +20,11 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
+            preScript:
+              - >-
+                apk update && apk add --no-cache \    chromium \    nss \   
+                freetype \    freetype-dev \    harfbuzz \    ca-certificates
+                \    ttf-freefont \    && rm -rf /var/cache/apk/*
           specifications:
             cpu: 2
             memory: 1
@@ -34,7 +39,6 @@ revolte:
             engine: postgres
     qa:
       branch: qatest
-      codeReview: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -64,7 +68,6 @@ revolte:
             engine: postgres
     production:
       branch: production
-      codeReview: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -97,7 +100,6 @@ revolte:
             storage: 30
             engine: postgres
     preview:
-      codeReview: true
       services:
         rid_1:
           type: WEB_SERVICE
