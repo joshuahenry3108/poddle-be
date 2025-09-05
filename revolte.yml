@@ -1,16 +1,10 @@
 revolte:
   version: '1.0'
-  project: QA test
-  appName: appcheck
-  config:
-    codeReview:
-      summarize: true
-      suggestFixes: false
-      commentStyle: Balanced
+  project: Friday
+  appName: friapp
   env:
     staging:
       branch: qatest
-      codeReview: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -26,8 +20,6 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
-            preScript:
-              - invalid check
           specifications:
             cpu: 2
             memory: 1
@@ -58,8 +50,6 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
-            preScript:
-              - invalid check
           specifications:
             cpu: 2
             memory: 1
