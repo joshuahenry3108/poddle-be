@@ -20,11 +20,6 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
-            preScript:
-              - >-
-                apk update && apk add --no-cache \    chromium \    nss \   
-                freetype \    freetype-dev \    harfbuzz \    ca-certificates
-                \    ttf-freefont \    && rm -rf /var/cache/apk/* 
           specifications:
             cpu: 2
             memory: 2
