@@ -1,10 +1,24 @@
 revolte:
   version: '1.0'
-  project: Alexa alexa
-  appName: app-again
+  project: QAtest
+  appName: backendapp
+  config:
+    codeReview:
+      summarize: false
+      suggestFixes: false
+    codeQuality:
+      codeStyle:
+        rules:
+          javascript/arrayCallbackReturn: warn
+          javascript/getterReturn: error
+          javascript/noConstantBinaryExpression: warn
+          javascript/preserveCaughtError: warn
+          javascript/varsOnTop: error
   env:
     staging:
       branch: qatest
+      codeReview: false
+      codeQuality: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -34,6 +48,8 @@ revolte:
             engine: postgres
     qa:
       branch: qatest
+      codeReview: false
+      codeQuality: false
       services:
         rid_1:
           type: WEB_SERVICE
