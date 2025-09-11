@@ -1,15 +1,21 @@
 revolte:
   version: '1.0'
-  project: Apple pro
-  appName: apple-be
+  project: Blueberry
+  appName: appptets
   config:
     codeReview:
-      summarize: false
-      suggestFixes: false
+      summarize: true
+      suggestFixes: true
+      commentStyle: Balanced
+    codeQuality:
+      codeStyle:
+        rules:
+          javascript/noUnusedVars: error
+          javascript/camelcase: warn
   env:
     staging:
-      branch: qatest
-      codeReview: false
+      branch: qa-test
+      codeReview: true
       codeQuality: true
       services:
         rid_1:
@@ -27,8 +33,8 @@ revolte:
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
           specifications:
-            cpu: 1
-            memory: 2
+            cpu: 2
+            memory: 1
             storage: 30
         rid_2:
           type: DATABASE
@@ -40,8 +46,8 @@ revolte:
             engine: postgres
     qa:
       branch: qatest
-      codeReview: false
-      codeQuality: false
+      codeReview: true
+      codeQuality: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -71,8 +77,8 @@ revolte:
             engine: postgres
     production:
       branch: qatest
-      codeReview: false
-      codeQuality: false
+      codeReview: true
+      codeQuality: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -105,8 +111,8 @@ revolte:
             storage: 30
             engine: postgres
     preview:
-      codeReview: false
-      codeQuality: false
+      codeReview: true
+      codeQuality: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -122,8 +128,6 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
-            preScript:
-              - npm test
           specifications:
             cpu: 2
             memory: 1
