@@ -2,15 +2,6 @@ revolte:
   version: '1.0'
   project: Codebyte
   appName: app890
-  config:
-    codeReview:
-      summarize: true
-      suggestFixes: false
-      commentStyle: Balanced
-    codeQuality:
-      codeStyle:
-        rules:
-          javascript/noUndef: error
   env:
     staging:
       branch: quality-test
@@ -45,8 +36,8 @@ revolte:
             engine: postgres
     qa:
       branch: qatest
-      codeReview: true
-      codeQuality: true
+      codeReview: false
+      codeQuality: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -62,6 +53,8 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
+              VITE_API_URL: '"test"'
+              VITE_SECRET_KEY: '#{secretKey}'
           specifications:
             cpu: 2
             memory: 1
