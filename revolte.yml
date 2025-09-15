@@ -1,22 +1,21 @@
 revolte:
   version: '1.0'
-  project: Blueberry
-  appName: appptets
+  project: Codebyte
+  appName: app890
   config:
     codeReview:
       summarize: true
-      suggestFixes: true
+      suggestFixes: false
       commentStyle: Balanced
     codeQuality:
       codeStyle:
         rules:
-          javascript/noUnusedVars: error
-          javascript/camelcase: warn
+          javascript/noUndef: error
   env:
     staging:
-      branch: qa-test
-      codeReview: true
-      codeQuality: true
+      branch: quality-test
+      codeReview: false
+      codeQuality: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -76,9 +75,9 @@ revolte:
             storage: 30
             engine: postgres
     production:
-      branch: qatest
-      codeReview: true
-      codeQuality: true
+      branch: production
+      codeReview: false
+      codeQuality: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -111,8 +110,8 @@ revolte:
             storage: 30
             engine: postgres
     preview:
-      codeReview: true
-      codeQuality: true
+      codeReview: false
+      codeQuality: false
       services:
         rid_1:
           type: WEB_SERVICE
