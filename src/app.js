@@ -25,6 +25,11 @@ const startServer = async () => {
   app.listen(8080, function () {
     console.log("app listening on port 8080");
   });
+
+  function greet() {
+  console.log(message); // 'message' is not defined anywhere
+}
+  
 };
 
 startServer();
