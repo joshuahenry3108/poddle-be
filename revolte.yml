@@ -78,6 +78,8 @@ revolte:
             engine: postgres
     production:
       branch: production
+      codeReview: true
+      codeQuality: true
       services:
         rid_1:
           type: WEB_SERVICE
