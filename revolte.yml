@@ -13,7 +13,7 @@ revolte:
           typescript/adjacentOverloadSignatures: error
   env:
     staging:
-      branch: qatest
+      branch: qa-test
       codeReview: true
       codeQuality: true
       services:
@@ -46,7 +46,7 @@ revolte:
     qa:
       branch: qatest
       codeReview: true
-      codeQuality: false
+      codeQuality: true
       services:
         rid_1:
           type: WEB_SERVICE
