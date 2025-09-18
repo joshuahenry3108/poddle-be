@@ -7,10 +7,6 @@ revolte:
       summarize: true
       suggestFixes: false
       commentStyle: Balanced
-    codeQuality:
-      codeStyle:
-        rules:
-          typescript/adjacentOverloadSignatures: error
   env:
     staging:
       branch: quality-test
