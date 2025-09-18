@@ -15,7 +15,7 @@ revolte:
     staging:
       branch: qatest
       codeReview: true
-      codeQuality: false
+      codeQuality: true
       services:
         rid_1:
           type: WEB_SERVICE
