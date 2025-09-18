@@ -1,11 +1,20 @@
 revolte:
   version: '1.0'
-  project: Codebyte
-  appName: app890
+  project: ABC proj
+  appName: jackma
+  config:
+    codeReview:
+      summarize: true
+      suggestFixes: false
+      commentStyle: Balanced
+    codeQuality:
+      codeStyle:
+        rules:
+          typescript/adjacentOverloadSignatures: error
   env:
     staging:
       branch: quality-test
-      codeReview: false
+      codeReview: true
       codeQuality: false
       services:
         rid_1:
@@ -36,7 +45,7 @@ revolte:
             engine: postgres
     qa:
       branch: qatest
-      codeReview: false
+      codeReview: true
       codeQuality: false
       services:
         rid_1:
@@ -69,8 +78,6 @@ revolte:
             engine: postgres
     production:
       branch: production
-      codeReview: false
-      codeQuality: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -103,8 +110,8 @@ revolte:
             storage: 30
             engine: postgres
     preview:
-      codeReview: false
-      codeQuality: false
+      codeReview: true
+      codeQuality: true
       services:
         rid_1:
           type: WEB_SERVICE
