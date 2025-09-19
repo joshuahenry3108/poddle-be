@@ -64,18 +64,16 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
-              VITE_API_URL: '"test"'
-              VITE_SECRET_KEY: '#{secretKey}'
           specifications:
             cpu: 2
-            memory: 1
+            memory: 2
             storage: 30
         rid_2:
           type: DATABASE
           name: db
           specifications:
             cpu: 2
-            memory: 1
+            memory: 4
             storage: 30
             engine: postgres
     production:
@@ -103,15 +101,15 @@ revolte:
             storage: 30
             autoScaling:
               replica:
-                min: 1
-                max: 1
+                min: 3
+                max: 3
         rid_2:
           type: DATABASE
           name: db
           specifications:
             cpu: 2
-            memory: 1
-            storage: 30
+            memory: 2
+            storage: 50
             engine: postgres
     preview:
       codeReview: true
