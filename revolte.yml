@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: plus pro
-  appName: poddle be
+  project: ABCDS
+  appName: app-new
   config:
     codeReview:
       summarize: true
@@ -131,7 +131,7 @@ revolte:
               DATABASE_NAME: '#{db.dbName}'
           specifications:
             cpu: 2
-            memory: 2
+            memory: 1
             storage: 30
         rid_2:
           type: DATABASE
