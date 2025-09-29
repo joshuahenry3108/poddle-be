@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: casagrand
-  appName: qatest
+  project: plus pro
+  appName: poddle be
   config:
     codeReview:
       summarize: true
@@ -10,7 +10,7 @@ revolte:
     codeQuality:
       codeStyle:
         rules:
-          typescript/adjacentOverloadSignatures: error
+          javascript/arrayCallbackReturn: error
   env:
     staging:
       branch: qatest
