@@ -5,8 +5,6 @@ revolte:
   env:
     staging:
       branch: qatest
-      codeReview: true
-      codeQuality: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -32,8 +30,6 @@ revolte:
             public: true
     qa:
       branch: qatest
-      codeReview: true
-      codeQuality: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -55,7 +51,7 @@ revolte:
           type: STORAGE_BUCKET
           name: storage_bucket_service
           configurations:
-            bucketName: bucket Name 1
+            bucketName: bucketName1
             versioningStatus: enabled
             public: true
             corsRules:
@@ -64,13 +60,13 @@ revolte:
                   - GET
                   - POST
                   - PUT
+                allowedHeaders:
+                  - '*'
                 origins:
                   - https://www.google.com/maps
                 maxAgeSeconds: 100
     production:
       branch: qatest
-      codeReview: true
-      codeQuality: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -99,8 +95,6 @@ revolte:
             versioningStatus: enabled
             public: true
     preview:
-      codeReview: true
-      codeQuality: true
       services:
         rid_1:
           type: WEB_SERVICE
