@@ -26,7 +26,7 @@ revolte:
           type: STORAGE_BUCKET
           name: storage_bucket_service
           configurations:
-            bucketName: buckettest2
+            bucketName: bucketc
             versioningStatus: enabled
             public: true
     qa:
@@ -52,7 +52,7 @@ revolte:
           type: STORAGE_BUCKET
           name: storage_bucket_service
           configurations:
-            bucketName: buckettest1
+            bucketName: buckettest
             versioningStatus: enabled
             public: true
             corsRules:
@@ -93,7 +93,7 @@ revolte:
           type: STORAGE_BUCKET
           name: storage_bucket_service
           configurations:
-            bucketName: buckettest4
+            bucketName: bucketf
             versioningStatus: enabled
             public: true
     preview:
@@ -118,6 +118,6 @@ revolte:
           type: STORAGE_BUCKET
           name: storage_bucket_service
           configurations:
-            bucketName: buckettest3
+            bucketName: bucketd
             versioningStatus: enabled
             public: true
