@@ -26,6 +26,7 @@ revolte:
           type: STORAGE_BUCKET
           name: storage_bucket_service
           configurations:
+            bucketName: bucketname2
             versioningStatus: enabled
             public: true
     qa:
@@ -92,6 +93,7 @@ revolte:
           type: STORAGE_BUCKET
           name: storage_bucket_service
           configurations:
+            bucketName: bucketname4
             versioningStatus: enabled
             public: true
     preview:
@@ -116,5 +118,6 @@ revolte:
           type: STORAGE_BUCKET
           name: storage_bucket_service
           configurations:
+            bucketName: bucketname3
             versioningStatus: enabled
             public: true
