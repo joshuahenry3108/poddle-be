@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Pamsapp
-  appName: pams-api-test
+  project: Simlabs
+  appName: swim-labs-api
   config:
     codeReview:
       summarize: true
