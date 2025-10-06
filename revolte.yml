@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Swimlabs
-  appName: swim-labs-api
+  project: phone pro
+  appName: qa-test-app
   config:
     codeReview:
       summarize: true
@@ -60,7 +60,7 @@ revolte:
               DATABASE_NAME: '#{db.dbName}'
           specifications:
             cpu: 2
-            memory: 1
+            memory: 2
             storage: 30
         rid_2:
           type: DATABASE
