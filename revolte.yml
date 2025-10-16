@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Automation
-  appName: backend
+  project: Untitled Project
+  appName: backendapp
   env:
     staging:
       branch: qatest
