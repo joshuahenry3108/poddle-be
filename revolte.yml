@@ -32,6 +32,13 @@ revolte:
             memory: 1
             storage: 30
             engine: postgres
+        rid_3:
+          type: STORAGE_BUCKET
+          name: storage_bucket_service
+          configurations:
+            bucketName: codegen-stg
+            versioningStatus: enabled
+            public: true
     qa:
       branch: qatest
       services:
@@ -61,6 +68,13 @@ revolte:
             memory: 1
             storage: 30
             engine: postgres
+        rid_3:
+          type: STORAGE_BUCKET
+          name: storage_bucket_service
+          configurations:
+            bucketName: codegen-qa
+            versioningStatus: enabled
+            public: true
     production:
       branch: qatest
       services:
@@ -94,6 +108,13 @@ revolte:
             memory: 1
             storage: 30
             engine: postgres
+        rid_3:
+          type: STORAGE_BUCKET
+          name: storage_bucket_service
+          configurations:
+            bucketName: codegen-prod
+            versioningStatus: enabled
+            public: true
     preview:
       services:
         rid_1:
@@ -122,3 +143,10 @@ revolte:
             memory: 1
             storage: 30
             engine: postgres
+        rid_3:
+          type: STORAGE_BUCKET
+          name: storage_bucket_service
+          configurations:
+            bucketName: codegen-preview
+            versioningStatus: enabled
+            public: true
