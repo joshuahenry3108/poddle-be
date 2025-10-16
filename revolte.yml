@@ -36,7 +36,7 @@ revolte:
           type: STORAGE_BUCKET
           name: storage_bucket_service
           configurations:
-            bucketName: codegen-stg
+            bucketName: codegen-stg2
             versioningStatus: enabled
             public: true
     qa:
@@ -72,7 +72,7 @@ revolte:
           type: STORAGE_BUCKET
           name: storage_bucket_service
           configurations:
-            bucketName: codegen-qa
+            bucketName: codegen-qa1
             versioningStatus: enabled
             public: true
     production:
@@ -112,7 +112,7 @@ revolte:
           type: STORAGE_BUCKET
           name: storage_bucket_service
           configurations:
-            bucketName: codegen-prod
+            bucketName: codegen-prod4
             versioningStatus: enabled
             public: true
     preview:
@@ -147,6 +147,6 @@ revolte:
           type: STORAGE_BUCKET
           name: storage_bucket_service
           configurations:
-            bucketName: codegen-preview
+            bucketName: codegen-preview3
             versioningStatus: enabled
             public: true
