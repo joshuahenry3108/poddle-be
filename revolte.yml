@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Untitled Project
-  appName: backendapp
+  project: Codegen
+  appName: api-check
   env:
     staging:
       branch: qatest
