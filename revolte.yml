@@ -74,7 +74,7 @@ revolte:
             engine: postgres
     production:
       branch: qatest
-      codeReview: false
+      codeReview: true
       codeQuality: true
       testSuite: false
       services:
