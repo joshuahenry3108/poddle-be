@@ -10,6 +10,9 @@ revolte:
   env:
     staging:
       branch: qatest
+      codeReview: false
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -39,6 +42,9 @@ revolte:
             engine: postgres
     qa:
       branch: qatest
+      codeReview: false
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -68,6 +74,9 @@ revolte:
             engine: postgres
     production:
       branch: qatest
+      codeReview: false
+      codeQuality: true
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -101,7 +110,7 @@ revolte:
             engine: postgres
     preview:
       codeReview: false
-      codeQuality: true
+      codeQuality: false
       testSuite: false
       services:
         rid_1:
