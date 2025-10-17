@@ -1,7 +1,12 @@
 revolte:
   version: '1.0'
-  project: Codegen
-  appName: api-check
+  project: Untitled Project
+  appName: api-kilo
+  config:
+    codeQuality:
+      codeStyle:
+        rules:
+          javascript/arrayCallbackReturn: warn
   env:
     staging:
       branch: qatest
@@ -32,13 +37,6 @@ revolte:
             memory: 1
             storage: 30
             engine: postgres
-        rid_3:
-          type: STORAGE_BUCKET
-          name: storage_bucket_service
-          configurations:
-            bucketName: codegen-stg2
-            versioningStatus: enabled
-            public: true
     qa:
       branch: qatest
       services:
@@ -68,13 +66,6 @@ revolte:
             memory: 1
             storage: 30
             engine: postgres
-        rid_3:
-          type: STORAGE_BUCKET
-          name: storage_bucket_service
-          configurations:
-            bucketName: codegen-qa1
-            versioningStatus: enabled
-            public: true
     production:
       branch: qatest
       services:
@@ -108,14 +99,10 @@ revolte:
             memory: 1
             storage: 30
             engine: postgres
-        rid_3:
-          type: STORAGE_BUCKET
-          name: storage_bucket_service
-          configurations:
-            bucketName: codegen-prod4
-            versioningStatus: enabled
-            public: true
     preview:
+      codeReview: false
+      codeQuality: true
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -143,10 +130,3 @@ revolte:
             memory: 1
             storage: 30
             engine: postgres
-        rid_3:
-          type: STORAGE_BUCKET
-          name: storage_bucket_service
-          configurations:
-            bucketName: codegen-preview3
-            versioningStatus: enabled
-            public: true
