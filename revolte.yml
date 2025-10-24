@@ -5,9 +5,6 @@ revolte:
   env:
     staging:
       branch: qatest
-      codeReview: false
-      codeQuality: false
-      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -23,6 +20,20 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
+          insights:
+            cpu:
+              - cpu_time_system
+              - cpu_time_user
+              - cpu_time_idle
+            swap:
+              - swap_used
+            mem:
+              - mem_free
+              - mem_total
+            disk:
+              - disk_free
+              - disk_total
+              - disk_used
           specifications:
             cpu: 2
             memory: 4
@@ -37,9 +48,6 @@ revolte:
             engine: postgres
     qa:
       branch: qatest
-      codeReview: false
-      codeQuality: false
-      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -69,9 +77,6 @@ revolte:
             engine: postgres
     production:
       branch: qatest
-      codeReview: true
-      codeQuality: true
-      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -104,9 +109,6 @@ revolte:
             storage: 30
             engine: postgres
     preview:
-      codeReview: false
-      codeQuality: false
-      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
