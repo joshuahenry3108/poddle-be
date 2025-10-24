@@ -1,12 +1,7 @@
 revolte:
   version: '1.0'
-  project: Untitled Project
-  appName: api-kilo
-  config:
-    codeQuality:
-      codeStyle:
-        rules:
-          javascript/arrayCallbackReturn: warn
+  project: AC Project
+  appName: app-new
   env:
     staging:
       branch: qatest
