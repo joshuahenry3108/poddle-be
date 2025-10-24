@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: AC Project
-  appName: app-new
+  project: IPSA
+  appName: poddle-be
   env:
     staging:
       branch: qatest
@@ -94,7 +94,7 @@ revolte:
               DATABASE_NAME: '#{db.dbName}'
           specifications:
             cpu: 2
-            memory: 1
+            memory: 2
             storage: 30
             autoScaling:
               replica:
