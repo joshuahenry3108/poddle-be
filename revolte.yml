@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: TechnoValt
-  appName: app-pom
+  project: Tuesday
+  appName: day-check
   env:
     staging:
       branch: qatest
