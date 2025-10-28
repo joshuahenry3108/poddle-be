@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: AC Project
-  appName: app-new
+  project: TechnoValt
+  appName: app-pom
   env:
     staging:
       branch: qatest
