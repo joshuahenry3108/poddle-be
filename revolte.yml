@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Techno-vault
-  appName: poddle-be
+  project: apppname
+  appName: apiapi
   config:
     codeReview:
       summarize: true
