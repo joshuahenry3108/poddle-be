@@ -1,7 +1,17 @@
 revolte:
   version: '1.0'
-  project: Tuesday
-  appName: day-check
+  project: Techno-vault
+  appName: poddle-be
+  config:
+    codeReview:
+      summarize: true
+      suggestFixes: false
+    codeQuality:
+      codeStyle:
+        rules:
+          javascript/arrayCallbackReturn: warn
+    testSuite:
+      command: npm run test
   env:
     staging:
       branch: qatest
@@ -48,6 +58,9 @@ revolte:
             engine: postgres
     qa:
       branch: qatest
+      codeReview: true
+      codeQuality: true
+      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
