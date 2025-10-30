@@ -1,15 +1,11 @@
 revolte:
   version: '1.0'
-  project: Moano
-  appName: poddlebe
+  project: happyapp
+  appName: appyapp
   config:
     codeReview:
       summarize: true
       suggestFixes: false
-    codeQuality:
-      codeStyle:
-        rules:
-          javascript/arrayCallbackReturn: warn
   env:
     staging:
       branch: qatest
