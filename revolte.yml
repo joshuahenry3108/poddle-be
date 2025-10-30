@@ -1,16 +1,21 @@
 revolte:
   version: '1.0'
-  project: Google Pixel
-  appName: bebe
+  project: Moano
+  appName: poddlebe
   config:
     codeReview:
       summarize: true
       suggestFixes: false
-      commentStyle: Concise
+    codeQuality:
+      codeStyle:
+        rules:
+          javascript/arrayCallbackReturn: warn
   env:
     staging:
-      branch: staging
+      branch: qatest
       codeReview: true
+      codeQuality: true
+      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -26,9 +31,23 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
+          insights:
+            cpu:
+              - cpu_time_system
+              - cpu_time_user
+              - cpu_time_idle
+            swap:
+              - swap_used
+            mem:
+              - mem_free
+              - mem_total
+            disk:
+              - disk_free
+              - disk_total
+              - disk_used
           specifications:
             cpu: 2
-            memory: 1
+            memory: 4
             storage: 30
         rid_2:
           type: DATABASE
@@ -39,8 +58,10 @@ revolte:
             storage: 30
             engine: postgres
     qa:
-      branch: review-test
+      branch: qatest
       codeReview: true
+      codeQuality: true
+      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -58,7 +79,7 @@ revolte:
               DATABASE_NAME: '#{db.dbName}'
           specifications:
             cpu: 2
-            memory: 1
+            memory: 2
             storage: 30
         rid_2:
           type: DATABASE
@@ -69,8 +90,10 @@ revolte:
             storage: 30
             engine: postgres
     production:
-      branch: production
+      branch: qatest
       codeReview: true
+      codeQuality: true
+      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -86,14 +109,28 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
+          insights:
+            cpu:
+              - cpu_time_idle
+              - cpu_time_system
+              - cpu_time_user
+            swap:
+              - swap_used
+            mem:
+              - mem_total
+              - mem_free
+            disk:
+              - disk_free
+              - disk_total
+              - disk_used
           specifications:
             cpu: 2
-            memory: 1
+            memory: 4
             storage: 30
             autoScaling:
               replica:
                 min: 1
-                max: 3
+                max: 1
         rid_2:
           type: DATABASE
           name: db
@@ -103,7 +140,9 @@ revolte:
             storage: 30
             engine: postgres
     preview:
-      codeReview: true
+      codeReview: false
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -121,7 +160,7 @@ revolte:
               DATABASE_NAME: '#{db.dbName}'
           specifications:
             cpu: 2
-            memory: 1
+            memory: 2
             storage: 30
         rid_2:
           type: DATABASE

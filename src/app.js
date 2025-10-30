@@ -8,7 +8,7 @@ const startServer = async () => {
   console.log(process.env);
   await connectDB();
   // Define request response in root URL (/) 
-  // to check comment style - concise
+  // updating fule
   app.get("/", function (req, res) {
     res.send("Dockerize the node app changed");
   });
@@ -25,6 +25,7 @@ const startServer = async () => {
   app.listen(8080, function () {
     console.log("app listening on port 8080");
   });
+  
 };
 
 startServer();
