@@ -1,11 +1,17 @@
 revolte:
   version: '1.0'
-  project: happyapp
-  appName: appyapp
+  project: Untitled Project
+  appName: new-app
   config:
     codeReview:
       summarize: true
       suggestFixes: false
+    codeQuality:
+      codeStyle:
+        rules:
+          javascript/arrayCallbackReturn: warn
+    testSuite:
+      command: npm run test
   env:
     staging:
       branch: qatest
@@ -136,9 +142,9 @@ revolte:
             storage: 30
             engine: postgres
     preview:
-      codeReview: false
-      codeQuality: false
-      testSuite: false
+      codeReview: true
+      codeQuality: true
+      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
