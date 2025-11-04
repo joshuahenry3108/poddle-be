@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Untitled Project
-  appName: new-app
+  project: DBASE
+  appName: app-mew
   config:
     codeReview:
       summarize: true
@@ -10,8 +10,6 @@ revolte:
       codeStyle:
         rules:
           javascript/arrayCallbackReturn: warn
-    testSuite:
-      command: npm run test
   env:
     staging:
       branch: qatest
