@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: DBASE
-  appName: app-mew
+  project: Teams
+  appName: backend
   config:
     codeReview:
       summarize: true
