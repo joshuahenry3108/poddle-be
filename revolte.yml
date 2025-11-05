@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Teams
-  appName: backend
+  project: Skype
+  appName: sky-app
   config:
     codeReview:
       summarize: true
@@ -59,9 +59,6 @@ revolte:
             engine: postgres
     qa:
       branch: qatest
-      codeReview: true
-      codeQuality: true
-      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -91,9 +88,6 @@ revolte:
             engine: postgres
     production:
       branch: qatest
-      codeReview: true
-      codeQuality: true
-      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
