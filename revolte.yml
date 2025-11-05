@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Skype
-  appName: sky-app
+  project: Paypal
+  appName: poddlebetest
   config:
     codeReview:
       summarize: true
@@ -12,7 +12,7 @@ revolte:
           javascript/arrayCallbackReturn: warn
   env:
     staging:
-      branch: qatest
+      branch: qa-test
       codeReview: true
       codeQuality: true
       testSuite: true
@@ -59,6 +59,9 @@ revolte:
             engine: postgres
     qa:
       branch: qatest
+      codeReview: false
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -87,7 +90,10 @@ revolte:
             storage: 30
             engine: postgres
     production:
-      branch: qatest
+      branch: production
+      codeReview: false
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
