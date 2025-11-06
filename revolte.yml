@@ -90,7 +90,7 @@ revolte:
             storage: 30
             engine: postgres
     production:
-      branch: production
+      branch: qatest
       codeReview: false
       codeQuality: false
       testSuite: false
