@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Paypal
-  appName: poddlebetest
+  project: Linear
+  appName: qa-app-be
   config:
     codeReview:
       summarize: true
