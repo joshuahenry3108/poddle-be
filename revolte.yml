@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Linear
-  appName: qa-app-be
+  project: Avantor
+  appName: backend-app
   config:
     codeReview:
       summarize: true
