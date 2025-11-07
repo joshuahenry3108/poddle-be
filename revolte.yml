@@ -10,6 +10,8 @@ revolte:
       codeStyle:
         rules:
           javascript/arrayCallbackReturn: warn
+    testSuite:
+      command: npm run test
   env:
     staging:
       branch: qa-test
@@ -91,9 +93,9 @@ revolte:
             engine: postgres
     production:
       branch: qatest
-      codeReview: false
-      codeQuality: false
-      testSuite: false
+      codeReview: true
+      codeQuality: true
+      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
