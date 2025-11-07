@@ -61,9 +61,9 @@ revolte:
             engine: postgres
     qa:
       branch: qatest
-      codeReview: false
-      codeQuality: false
-      testSuite: false
+      codeReview: true
+      codeQuality: true
+      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
