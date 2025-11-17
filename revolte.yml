@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: luxsoft
-  appName: backend-app
+  project: AC Project
+  appName: backendapp
   config:
     codeReview:
       summarize: true
