@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: AC Project
-  appName: backendapp
+  project: Blueberry
+  appName: qa-backend
   config:
     codeReview:
       summarize: true
