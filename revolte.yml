@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Blueberry
-  appName: qa-backend
+  project: ALB Project
+  appName: second-deploy
   config:
     codeReview:
       summarize: true
@@ -33,6 +33,7 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
+            loadBalancerMode: dedicated
           insights:
             cpu:
               - cpu_time_system
@@ -79,6 +80,7 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
+            loadBalancerMode: shared
           insights:
             cpu:
               - cpu_time_idle
@@ -125,6 +127,7 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
+            loadBalancerMode: dedicated
           insights:
             cpu:
               - cpu_time_idle
@@ -174,6 +177,7 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
+            loadBalancerMode: dedicated
           specifications:
             cpu: 2
             memory: 2
