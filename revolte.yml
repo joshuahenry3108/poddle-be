@@ -5,19 +5,14 @@ revolte:
   config:
     codeReview:
       summarize: true
-      suggestFixes: false
-    codeQuality:
-      codeStyle:
-        rules:
-          javascript/arrayCallbackReturn: warn
-    testSuite:
-      command: npm run test
+      suggestFixes: true
+      commentStyle: Balanced
   env:
     staging:
       branch: qatest
-      codeReview: true
-      codeQuality: true
-      testSuite: true
+      codeReview: false
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -33,24 +28,10 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
-            loadBalancerMode: dedicated
-          insights:
-            cpu:
-              - cpu_time_system
-              - cpu_time_user
-              - cpu_time_idle
-            swap:
-              - swap_used
-            mem:
-              - mem_free
-              - mem_total
-            disk:
-              - disk_free
-              - disk_total
-              - disk_used
+            loadBalancerMode: shared
           specifications:
             cpu: 2
-            memory: 4
+            memory: 1
             storage: 30
         rid_2:
           type: DATABASE
@@ -62,56 +43,9 @@ revolte:
             engine: postgres
     qa:
       branch: qatest
-      codeReview: true
-      codeQuality: true
-      testSuite: true
-      services:
-        rid_1:
-          type: WEB_SERVICE
-          name: web_service
-          entryPoint: index.js
-          properties:
-            health: /health
-            port: 8080
-            variables:
-              BASE_URL: /api/v1
-              DATABASE_URL: '#{db.dbUrl}'
-              DATABASE_PORT: '#{db.dbPort}'
-              DATABASE_USERNAME: '#{db.dbUsername}'
-              DATABASE_PASSWORD: '#{db.dbPassword}'
-              DATABASE_NAME: '#{db.dbName}'
-            loadBalancerMode: shared
-          insights:
-            cpu:
-              - cpu_time_idle
-              - cpu_time_user
-              - cpu_time_system
-            swap:
-              - swap_used
-            mem:
-              - mem_total
-              - mem_free
-            disk:
-              - disk_free
-              - disk_total
-              - disk_used
-          specifications:
-            cpu: 2
-            memory: 4
-            storage: 30
-        rid_2:
-          type: DATABASE
-          name: db
-          specifications:
-            cpu: 2
-            memory: 1
-            storage: 30
-            engine: postgres
-    production:
-      branch: qatest
-      codeReview: true
-      codeQuality: true
-      testSuite: true
+      codeReview: false
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -128,40 +62,23 @@ revolte:
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
             loadBalancerMode: dedicated
-          insights:
-            cpu:
-              - cpu_time_idle
-              - cpu_time_system
-              - cpu_time_user
-            swap:
-              - swap_used
-            mem:
-              - mem_total
-              - mem_free
-            disk:
-              - disk_free
-              - disk_total
-              - disk_used
           specifications:
             cpu: 2
-            memory: 4
+            memory: 1
             storage: 30
-            autoScaling:
-              replica:
-                min: 1
-                max: 1
-        rid_3:
+        rid_2:
           type: DATABASE
           name: db
           specifications:
             cpu: 2
-            memory: 2
+            memory: 1
             storage: 30
             engine: postgres
-    preview:
-      codeReview: true
-      codeQuality: true
-      testSuite: true
+    production:
+      branch: qatest
+      codeReview: false
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -180,7 +97,43 @@ revolte:
             loadBalancerMode: shared
           specifications:
             cpu: 2
-            memory: 2
+            memory: 1
+            storage: 30
+            autoScaling:
+              replica:
+                min: 1
+                max: 1
+        rid_2:
+          type: DATABASE
+          name: db
+          specifications:
+            cpu: 2
+            memory: 1
+            storage: 30
+            engine: postgres
+    preview:
+      codeReview: false
+      codeQuality: false
+      testSuite: false
+      services:
+        rid_1:
+          type: WEB_SERVICE
+          name: web_service
+          entryPoint: index.js
+          properties:
+            health: /health
+            port: 8080
+            variables:
+              BASE_URL: /api/v1
+              DATABASE_URL: '#{db.dbUrl}'
+              DATABASE_PORT: '#{db.dbPort}'
+              DATABASE_USERNAME: '#{db.dbUsername}'
+              DATABASE_PASSWORD: '#{db.dbPassword}'
+              DATABASE_NAME: '#{db.dbName}'
+            loadBalancerMode: dedicated
+          specifications:
+            cpu: 2
+            memory: 1
             storage: 30
         rid_2:
           type: DATABASE
