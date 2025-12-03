@@ -1,18 +1,10 @@
 revolte:
   version: '1.0'
-  project: Vecna Project
-  appName: vecna-api
-  config:
-    codeReview:
-      summarize: true
-      suggestFixes: true
-      commentStyle: Balanced
+  project: My Sample Project
+  appName: backend-application
   env:
     staging:
-      branch: qatest
-      codeReview: false
-      codeQuality: false
-      testSuite: false
+      branch: qa-test
       services:
         rid_1:
           type: WEB_SERVICE
@@ -21,6 +13,7 @@ revolte:
           properties:
             health: /health
             port: 8080
+            loadBalancerMode: dedicated
             variables:
               BASE_URL: /api/v1
               DATABASE_URL: '#{db.dbUrl}'
@@ -28,7 +21,6 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
-            loadBalancerMode: shared
           specifications:
             cpu: 2
             memory: 1
@@ -43,9 +35,6 @@ revolte:
             engine: postgres
     qa:
       branch: qatest
-      codeReview: false
-      codeQuality: false
-      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -54,6 +43,7 @@ revolte:
           properties:
             health: /health
             port: 8080
+            loadBalancerMode: shared
             variables:
               BASE_URL: /api/v1
               DATABASE_URL: '#{db.dbUrl}'
@@ -61,21 +51,17 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
-            loadBalancerMode: dedicated
           insights:
             cpu:
               - cpu_time_idle
-              - cpu_time_user
               - cpu_time_system
+              - cpu_time_user
             swap:
               - swap_used
-            mem:
-              - mem_free
-              - mem_total
             disk:
-              - disk_free
-              - disk_total
               - disk_used
+              - disk_total
+              - disk_free
           specifications:
             cpu: 2
             memory: 1
@@ -89,10 +75,7 @@ revolte:
             storage: 30
             engine: postgres
     production:
-      branch: qatest
-      codeReview: false
-      codeQuality: false
-      testSuite: false
+      branch: main
       services:
         rid_1:
           type: WEB_SERVICE
@@ -101,6 +84,7 @@ revolte:
           properties:
             health: /health
             port: 8080
+            loadBalancerMode: dedicated
             variables:
               BASE_URL: /api/v1
               DATABASE_URL: '#{db.dbUrl}'
@@ -108,7 +92,6 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
-            loadBalancerMode: dedicated
           specifications:
             cpu: 2
             memory: 1
@@ -126,9 +109,6 @@ revolte:
             storage: 30
             engine: postgres
     preview:
-      codeReview: false
-      codeQuality: false
-      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -137,6 +117,7 @@ revolte:
           properties:
             health: /health
             port: 8080
+            loadBalancerMode: dedicated
             variables:
               BASE_URL: /api/v1
               DATABASE_URL: '#{db.dbUrl}'
@@ -144,7 +125,6 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
-            loadBalancerMode: shared
           specifications:
             cpu: 2
             memory: 1
