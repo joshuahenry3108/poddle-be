@@ -3,11 +3,11 @@ name: Node.js CI
 on:
   push:
     branches:
-      - qatest
+      - main
       - qatest-ci
   pull_request:
     branches:
-      - qatest
+      - main
       - qatest-ci
 
 jobs:
