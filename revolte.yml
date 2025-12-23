@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Second Project
-  appName: node-app
+  project: BPO Project
+  appName: bp-apptest
   env:
     staging:
       branch: qa-test
