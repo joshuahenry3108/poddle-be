@@ -51,8 +51,6 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
-              VITE_API_URL: test
-              ' VITE_SECRET_KEY': '#{secretKey}'
           insights:
             cpu:
               - cpu_time_idle
