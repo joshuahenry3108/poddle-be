@@ -1,21 +1,10 @@
 revolte:
   version: '1.0'
-  project: Moano
-  appName: poddlebe
-  config:
-    codeReview:
-      summarize: true
-      suggestFixes: false
-    codeQuality:
-      codeStyle:
-        rules:
-          javascript/arrayCallbackReturn: warn
+  project: Backend Project
+  appName: backendapp
   env:
     staging:
-      branch: qatest
-      codeReview: true
-      codeQuality: true
-      testSuite: true
+      branch: qa-test
       services:
         rid_1:
           type: WEB_SERVICE
@@ -24,6 +13,7 @@ revolte:
           properties:
             health: /health
             port: 8080
+            loadBalancerMode: dedicated
             variables:
               BASE_URL: /api/v1
               DATABASE_URL: '#{db.dbUrl}'
@@ -31,23 +21,9 @@ revolte:
               DATABASE_USERNAME: '#{db.dbUsername}'
               DATABASE_PASSWORD: '#{db.dbPassword}'
               DATABASE_NAME: '#{db.dbName}'
-          insights:
-            cpu:
-              - cpu_time_system
-              - cpu_time_user
-              - cpu_time_idle
-            swap:
-              - swap_used
-            mem:
-              - mem_free
-              - mem_total
-            disk:
-              - disk_free
-              - disk_total
-              - disk_used
           specifications:
             cpu: 2
-            memory: 4
+            memory: 1
             storage: 30
         rid_2:
           type: DATABASE
@@ -59,9 +35,6 @@ revolte:
             engine: postgres
     qa:
       branch: qatest
-      codeReview: true
-      codeQuality: true
-      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -70,38 +43,7 @@ revolte:
           properties:
             health: /health
             port: 8080
-            variables:
-              BASE_URL: /api/v1
-              DATABASE_URL: '#{db.dbUrl}'
-              DATABASE_PORT: '#{db.dbPort}'
-              DATABASE_USERNAME: '#{db.dbUsername}'
-              DATABASE_PASSWORD: '#{db.dbPassword}'
-              DATABASE_NAME: '#{db.dbName}'
-          specifications:
-            cpu: 2
-            memory: 2
-            storage: 30
-        rid_2:
-          type: DATABASE
-          name: db
-          specifications:
-            cpu: 2
-            memory: 1
-            storage: 30
-            engine: postgres
-    production:
-      branch: qatest
-      codeReview: true
-      codeQuality: true
-      testSuite: true
-      services:
-        rid_1:
-          type: WEB_SERVICE
-          name: web_service
-          entryPoint: index.js
-          properties:
-            health: /health
-            port: 8080
+            loadBalancerMode: shared
             variables:
               BASE_URL: /api/v1
               DATABASE_URL: '#{db.dbUrl}'
@@ -120,12 +62,42 @@ revolte:
               - mem_total
               - mem_free
             disk:
-              - disk_free
-              - disk_total
               - disk_used
+              - disk_total
+              - disk_free
           specifications:
             cpu: 2
-            memory: 4
+            memory: 1
+            storage: 30
+        rid_2:
+          type: DATABASE
+          name: db
+          specifications:
+            cpu: 2
+            memory: 1
+            storage: 30
+            engine: postgres
+    production:
+      branch: main
+      services:
+        rid_1:
+          type: WEB_SERVICE
+          name: web_service
+          entryPoint: index.js
+          properties:
+            health: /health
+            port: 8080
+            loadBalancerMode: dedicated
+            variables:
+              BASE_URL: /api/v1
+              DATABASE_URL: '#{db.dbUrl}'
+              DATABASE_PORT: '#{db.dbPort}'
+              DATABASE_USERNAME: '#{db.dbUsername}'
+              DATABASE_PASSWORD: '#{db.dbPassword}'
+              DATABASE_NAME: '#{db.dbName}'
+          specifications:
+            cpu: 2
+            memory: 1
             storage: 30
             autoScaling:
               replica:
@@ -140,9 +112,6 @@ revolte:
             storage: 30
             engine: postgres
     preview:
-      codeReview: false
-      codeQuality: false
-      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -151,6 +120,7 @@ revolte:
           properties:
             health: /health
             port: 8080
+            loadBalancerMode: dedicated
             variables:
               BASE_URL: /api/v1
               DATABASE_URL: '#{db.dbUrl}'
@@ -160,7 +130,7 @@ revolte:
               DATABASE_NAME: '#{db.dbName}'
           specifications:
             cpu: 2
-            memory: 2
+            memory: 1
             storage: 30
         rid_2:
           type: DATABASE
