@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: BPO Project
-  appName: bp-apptest
+  project: Backend Project
+  appName: backendapp
   env:
     staging:
       branch: qa-test
@@ -58,6 +58,13 @@ revolte:
               - cpu_time_user
             swap:
               - swap_used
+            mem:
+              - mem_total
+              - mem_free
+            disk:
+              - disk_used
+              - disk_total
+              - disk_free
           specifications:
             cpu: 2
             memory: 1
