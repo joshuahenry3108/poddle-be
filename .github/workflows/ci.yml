@@ -1,0 +1,40 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - main
+      - qatest-ci
+  pull_request:
+    branches:
+      - main
+      - qatest-ci
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+  
+  second-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Echo Job Name
+        run: echo "This is the second job running after build-and-test-cb"
+
+      - name: sleep command in second job
+        run: sleep 40
